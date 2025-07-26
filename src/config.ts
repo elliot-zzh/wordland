@@ -18,7 +18,7 @@ export const AUTHORS = [
     email: 'quensonanna.su@icloud.com'
   },
   {
-    cnName: '莫名',
+    cnName: '孑川',
     badges: ['撰写人'],
     email: 'morningming@foxmail.com'
   }
