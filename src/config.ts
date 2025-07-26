@@ -20,7 +20,7 @@ export const AUTHORS = [
   {
     cnName: '孑川',
     badges: ['撰写人'],
-    email: 'morningming@foxmail.com'
+    email: 'je_llivv@icloud.com'
   }
 ]
 
