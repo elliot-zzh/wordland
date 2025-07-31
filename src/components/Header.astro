@@ -3,17 +3,38 @@ import HeaderLink from './HeaderLink.astro'
 ---
 
 <header>
-  <nav class="flex items-center p-3px pl-10px pr-8px shadow-lg">
-    <HeaderLink href="/" title="主页" class="i-tabler-tent" />
-    <HeaderLink href="/words" title="文章列表" class="i-tabler-notebook" />
-    <HeaderLink href="/authors" title="作者列表" class="i-tabler-snowman" />
-    <HeaderLink href="/declarations" title="法律声明" class="i-tabler-scale" />
-    <HeaderLink href="/write" title="投稿" class="i-tabler-mail" />
-    <HeaderLink href="/rss" title="RSS订阅" class="i-tabler-rss" />
+  <nav class="shadow-lg">
+    <div class="flex items-center w-fit p-3px pl-10px pr-8px" id="inner-nav-box">
+      <HeaderLink href="/" title="主页" class="i-tabler-tent" />
+      <HeaderLink href="/words" title="文章列表" class="i-tabler-notebook" />
+      <HeaderLink href="/authors" title="作者列表" class="i-tabler-snowman" />
+      <HeaderLink href="/declarations" title="法律声明" class="i-tabler-scale" />
+      <HeaderLink href="/write" title="投稿" class="i-tabler-mail" />
+      <HeaderLink href="/rss" title="RSS订阅" class="i-tabler-rss" />
+    </div>
   </nav>
 </header>
+
 <style>
   header {
     margin: 0em 0 1.6em;
   }
+  .hover-all-children > a {
+    color: var(--light-sea-blue);
+  }
 </style>
+
+<script>
+  let nav = document.querySelector('#inner-nav-box') as HTMLElement;
+
+  nav.addEventListener('mouseover', e => {
+    if (e.target !== parent) nav.classList.add('hover-all-children');
+  });
+
+  nav.addEventListener('mouseout', e => {
+    let to = e.relatedTarget as Node | null
+    if (to && !nav.contains(to)) {
+      nav.classList.remove('hover-all-children');
+    }
+  });
+</script>
