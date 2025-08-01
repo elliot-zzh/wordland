@@ -42,7 +42,7 @@ import HeaderLink from './HeaderLink.astro'
   nav.addEventListener('mousemove', (e) => {
     const rect = nav.getBoundingClientRect();
 
-    let x = e.clientX - rect.left - 640;
+    let x = e.clientX - rect.left - 600;
 
     x = Math.min(Math.max(x * 0.2, -50), 0);
   
