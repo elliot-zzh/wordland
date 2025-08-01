@@ -9,13 +9,13 @@
   <div v-else class="flex items-center flex-nowrap mb-5px">
     <input
       v-model="searchWords"
-      class="w-full pushable focus:shadow-lg hover:shadow-lg transition-160"
+      class="w-full pushable focus:shadow-xl hover:shadow-xl transition-160"
     />
     <span class="i-tabler-search text-1.2em m-6px hover:rotate-10 transition-160"></span>
   </div>
   <div class="slide-enter-content">
     <div
-      class="list p-10px pl-20px mb-20px items-center flex flex-wrap hover:shadow-lg transition-180"
+      class="list p-10px pl-20px mb-20px items-center flex flex-wrap hover:shadow-xl transition-240"
       v-for="article in articlesToShow"
       :class="mode === 'Full' ? 'rounded-10px' : 'rounded-8px'"
     >
@@ -24,7 +24,7 @@
         class="pushable article-link text-1.35em font-bold m-5px ml-2px mr-0 hover:decoration-none flex items-center"
       >
         <span>{{ article.title }}</span>
-        <span class="i-tabler-chevrons-right transition-180"></span>
+        <span class="i-tabler-chevrons-right transition-240"></span>
       </a>
       <div class="w-100%"></div>
       <time class="ml-20px m-5px not-italic">{{ article.pubDate }}</time>
@@ -42,10 +42,10 @@
     <a
       v-if="mode === 'Simple'"
       href="/words"
-      class="pushable all-articles-link hover:shadow-lg transition-180 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px text-very-dark-gray"
+      class="pushable all-articles-link hover:shadow-xl transition-240 flex m-auto mt-33px mb-73px items-center justify-center max-w-110px rounded-10px p-5px hover:p-7px text-very-dark-gray"
     >
       <span>全部文章</span>
-      <span class="ml-1px i-tabler-chevrons-right transition-160"></span>
+      <span class="ml-1px i-tabler-chevrons-right transition-240"></span>
     </a>
   </div>
 </template>
@@ -87,9 +87,18 @@ div.list {
 .article-link .i-tabler-chevrons-right {
   opacity: 0;
 }
-.article-link:hover .i-tabler-chevrons-right {
+div.list:hover .i-tabler-chevrons-right {
   opacity: 1;
   transform: translate(10px, 0px);
+}
+div.list:hover {
+  background-color: var(--very-dark-gray);
+}
+div.list:hover * {
+  color: #fff;
+}
+div.list:hover .article-link * {
+  color: var(--light-sand-yellow);
 }
 .all-articles-link {
   border: 2px solid var(--very-dark-gray);
@@ -97,6 +106,12 @@ div.list {
   user-select: none;
 }
 .all-articles-link:hover .i-tabler-chevrons-right {
-  transform: translate(8px, 0px);
+  transform: translate(6px, 0px);
+}
+.all-articles-link:hover {
+  background-image: linear-gradient(90deg, var(--very-dark-gray), var(--dark-gray));
+  background-position: center;
+  color: #fff;
+  border-width: 0;
 }
 </style>

@@ -1,5 +1,5 @@
 :root {
-  --gray: #777;
+  --gray: #6a6d6e;
   --dark-gray: #444;
   --very-dark-gray: #222;
   --very-light-sea-blue: #8dbeff;
@@ -7,6 +7,7 @@
   --sea-blue: #316fd3;
   --dark-sea-blue: #2655b9;
   --sand-yellow: #f3ec86;
+  --light-sand-yellow: #fff9c5;
 }
 
 body {

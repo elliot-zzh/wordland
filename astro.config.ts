@@ -25,7 +25,8 @@ export default defineConfig({
           veryLightSeaBlue: 'var(--very-light-sea-blue)',
           seaBlue: 'var(--sea-blue)',
           darkSeaBlue: 'var(--dark-sea-blue)',
-          sandYellow: 'var(--sand-yellow)'
+          sandYellow: 'var(--sand-yellow)',
+          lightSandYellow: 'var(--light-sand-yellow)',
         }
       },
       presets: [
