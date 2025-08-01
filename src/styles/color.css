@@ -43,6 +43,7 @@ nav {
     var(--sand-yellow) 70%,
     var(--sand-yellow) 100%
   );
+  background-size: 110% 200%;
   color: white;
 }
 blockquote {

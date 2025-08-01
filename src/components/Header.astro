@@ -25,16 +25,31 @@ import HeaderLink from './HeaderLink.astro'
 </style>
 
 <script>
-  let nav = document.querySelector('#inner-nav-box') as HTMLElement;
+  const div = document.querySelector('#inner-nav-box') as HTMLElement;
 
-  nav.addEventListener('mouseover', e => {
-    if (e.target !== parent) nav.classList.add('hover-all-children');
+  div.addEventListener('mouseover', e => {
+    if (e.target !== parent) div.classList.add('hover-all-children');
   });
 
-  nav.addEventListener('mouseout', e => {
+  div.addEventListener('mouseout', e => {
     let to = e.relatedTarget as Node | null
-    if (to && !nav.contains(to)) {
-      nav.classList.remove('hover-all-children');
+    if (to && !div.contains(to)) {
+      div.classList.remove('hover-all-children');
     }
+  });
+  
+  const nav = document.querySelector('nav') as HTMLElement;
+  nav.addEventListener('mousemove', (e) => {
+    const rect = nav.getBoundingClientRect();
+
+    let x = e.clientX - rect.left - 640;
+
+    x = Math.min(Math.max(x * 0.2, -50), 0);
+  
+    nav.style.backgroundPosition = `${x}px 0px`;
+    
+  });
+  nav.addEventListener('mouseleave', () => {
+    nav.style.backgroundPosition = '0px 0px';
   });
 </script>
