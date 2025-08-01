@@ -38,18 +38,21 @@ import HeaderLink from './HeaderLink.astro'
     }
   });
   
+  // Only enable nav background movement on PC (not mobile)
+  function isPC() {
+    return window.matchMedia('(pointer:fine)').matches;
+  }
+
   const nav = document.querySelector('nav') as HTMLElement;
-  nav.addEventListener('mousemove', (e) => {
-    const rect = nav.getBoundingClientRect();
-
-    let x = e.clientX - rect.left - 600;
-
-    x = Math.min(Math.max(x * 0.2, -50), 0);
-  
-    nav.style.backgroundPosition = `${x}px 0px`;
-    
-  });
-  nav.addEventListener('mouseleave', () => {
-    nav.style.backgroundPosition = '0px 0px';
-  });
+  if (isPC()) {
+    nav.addEventListener('mousemove', (e) => {
+      const rect = nav.getBoundingClientRect();
+      let x = e.clientX - rect.left - 600;
+      x = Math.min(Math.max(x * 0.2, -50), 0);
+      nav.style.backgroundPosition = `${x}px 0px`;
+    });
+    nav.addEventListener('mouseleave', () => {
+      nav.style.backgroundPosition = '0px 0px';
+    });
+  }
 </script>
