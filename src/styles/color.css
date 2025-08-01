@@ -2,6 +2,7 @@
   --gray: #777;
   --dark-gray: #444;
   --very-dark-gray: #222;
+  --very-light-sea-blue: #8dbeff;
   --light-sea-blue: #59a6ff;
   --sea-blue: #316fd3;
   --dark-sea-blue: #2655b9;
@@ -36,11 +37,13 @@ input:focus {
 nav {
   background-image: linear-gradient(
     135deg,
-    var(--sea-blue) 0%,
-    var(--sea-blue) 55%,
-    var(--light-sea-blue) 55%,
-    var(--light-sea-blue) 70%,
-    var(--sand-yellow) 70%,
+    var(--dark-sea-blue) 0%,
+    var(--sea-blue) 38%,
+    var(--sea-blue) 52%,
+    var(--light-sea-blue) 52%,
+    var(--light-sea-blue) 58%,
+    var(--very-light-sea-blue) 68%,
+    var(--sand-yellow) 68%,
     var(--sand-yellow) 100%
   );
   background-size: 110% 200%;
