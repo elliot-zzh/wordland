@@ -13,6 +13,11 @@ export const AUTHORS = [
     email: '2512006026@qq.com'
   },
   {
+    cnName: '蓝绿球',
+    badges: ['撰写人'],
+    email: '/'
+  },
+  {
     cnName: '左蓝',
     badges: ['撰写人'],
     email: 'quensonanna.su@icloud.com'
