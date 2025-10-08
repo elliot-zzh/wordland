@@ -5,7 +5,7 @@ export const AUTHORS = [
   {
     cnName: '张又左',
     badges: ['编辑', '撰写人'],
-    email: 'zhangzheheng12345@163.com'
+    email: 'elliot_zh@proton.me'
   },
   {
     cnName: '陈晏如',
@@ -23,9 +23,9 @@ export const AUTHORS = [
     email: 'quensonanna.su@icloud.com'
   },
   {
-    cnName: '莫名',
+    cnName: '孑川',
     badges: ['撰写人'],
-    email: 'morningming@foxmail.com'
+    email: 'je_llivv@icloud.com'
   }
 ]
 

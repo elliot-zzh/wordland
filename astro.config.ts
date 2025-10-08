@@ -5,6 +5,7 @@ import { presetUno, presetIcons } from 'unocss'
 import sitemap from '@astrojs/sitemap'
 import netlify from '@astrojs/netlify/functions'
 import vue from '@astrojs/vue'
+import { version } from 'vue'
 
 const siteDomain = 'wordland.site'
 
@@ -21,9 +22,11 @@ export default defineConfig({
           darkGray: 'var(--dark-gray)',
           veryDarkGray: 'var(--very-dark-gray)',
           lightSeaBlue: 'var(--light-sea-blue)',
+          veryLightSeaBlue: 'var(--very-light-sea-blue)',
           seaBlue: 'var(--sea-blue)',
           darkSeaBlue: 'var(--dark-sea-blue)',
-          sandYellow: 'var(--sand-yellow)'
+          sandYellow: 'var(--sand-yellow)',
+          lightSandYellow: 'var(--light-sand-yellow)',
         }
       },
       presets: [

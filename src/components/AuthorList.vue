@@ -26,10 +26,10 @@ import { AUTHORS } from '../config'
 </script>
 
 <style scoped>
-div.list {
+.list {
   border: 2px solid #222;
 }
-.email:hover .i-tabler-mailbox {
+.list:hover .i-tabler-mailbox {
   transform: translateY(-3px);
 }
 </style>
