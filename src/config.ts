@@ -15,7 +15,7 @@ export const AUTHORS = [
   {
     cnName: '蓝绿球',
     badges: ['撰写人'],
-    email: '/'
+    email: 'hzy_200711@163.com'
   },
   {
     cnName: '左蓝',
