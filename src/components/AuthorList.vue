@@ -8,7 +8,7 @@
       <div class="flex flex-wrap m-10px">
         <span
           v-for="badge in author.badges"
-          class="badge text-white line-height-100% decoration-none m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
+          class="badge text-white line-height-100% ！decoration-none m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
         >
           {{ badge }}
         </span>
@@ -42,7 +42,7 @@ import { AUTHORS } from '../config'
 .list:hover .i-tabler-mailbox {
   transform: translateY(-3px);
 }
-.list:hover .author-name * {
+.list:hover .author-name {
   color: var(--light-sand-yellow);
 }
 </style>
