@@ -26,7 +26,6 @@ import { AUTHORS } from '../config'
 </script>
 
 <style scoped>
-
 .list {
   border: 2px solid var(--very-dark-gray);
 }

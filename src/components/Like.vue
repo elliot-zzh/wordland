@@ -26,7 +26,7 @@ const toLike = useLocalStorage(getStorageKeyToLike(props.name), false)
 const likesCount = ref(0)
 
 const res = await getArticleLikes(props.name)
-likesCount.value = res ? res as number : 0
+likesCount.value = res ? (res as number) : 0
 
 onMounted(async () => {
   // Refresh toLike

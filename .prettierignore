@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vscode/
+.config/
+.netlify/
+.cache/
+*.min.js
+*.min.css
+
+*.md
+*.mdx

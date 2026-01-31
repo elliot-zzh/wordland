@@ -4,11 +4,18 @@ import HeaderLink from './HeaderLink.astro'
 
 <header>
   <nav class="shadow-lg">
-    <div class="flex items-center w-fit p-3px pl-10px pr-8px" id="inner-nav-box">
+    <div
+      class="flex items-center w-fit p-3px pl-10px pr-8px"
+      id="inner-nav-box"
+    >
       <HeaderLink href="/" title="主页" class="i-tabler-tent" />
       <HeaderLink href="/words" title="文章列表" class="i-tabler-notebook" />
       <HeaderLink href="/authors" title="作者列表" class="i-tabler-snowman" />
-      <HeaderLink href="/declarations" title="法律声明" class="i-tabler-scale" />
+      <HeaderLink
+        href="/declarations"
+        title="法律声明"
+        class="i-tabler-scale"
+      />
       <HeaderLink href="/write" title="投稿" class="i-tabler-mail" />
       <HeaderLink href="/rss" title="RSS订阅" class="i-tabler-rss" />
     </div>
@@ -25,34 +32,34 @@ import HeaderLink from './HeaderLink.astro'
 </style>
 
 <script>
-  const div = document.querySelector('#inner-nav-box') as HTMLElement;
+  const div = document.querySelector('#inner-nav-box') as HTMLElement
 
-  div.addEventListener('mouseover', e => {
-    if (e.target !== parent) div.classList.add('hover-all-children');
-  });
+  div.addEventListener('mouseover', (e) => {
+    if (e.target !== parent) div.classList.add('hover-all-children')
+  })
 
-  div.addEventListener('mouseout', e => {
+  div.addEventListener('mouseout', (e) => {
     let to = e.relatedTarget as Node | null
     if (to && !div.contains(to)) {
-      div.classList.remove('hover-all-children');
+      div.classList.remove('hover-all-children')
     }
-  });
-  
+  })
+
   // Only enable nav background movement on PC (not mobile)
   function isPC() {
-    return window.matchMedia('(pointer:fine)').matches;
+    return window.matchMedia('(pointer:fine)').matches
   }
 
-  const nav = document.querySelector('nav') as HTMLElement;
+  const nav = document.querySelector('nav') as HTMLElement
   if (isPC()) {
     nav.addEventListener('mousemove', (e) => {
-      const rect = nav.getBoundingClientRect();
-      let x = e.clientX - rect.left - 600;
-      x = Math.min(Math.max(x * 0.2, -50), 0);
-      nav.style.backgroundPosition = `${x}px 0px`;
-    });
+      const rect = nav.getBoundingClientRect()
+      let x = e.clientX - rect.left - 600
+      x = Math.min(Math.max(x * 0.2, -50), 0)
+      nav.style.backgroundPosition = `${x}px 0px`
+    })
     nav.addEventListener('mouseleave', () => {
-      nav.style.backgroundPosition = '0px 0px';
-    });
+      nav.style.backgroundPosition = '0px 0px'
+    })
   }
 </script>

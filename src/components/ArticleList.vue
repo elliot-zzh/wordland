@@ -11,7 +11,9 @@
       v-model="searchWords"
       class="w-full pushable focus:shadow-xl hover:shadow-xl transition-160"
     />
-    <span class="i-tabler-search text-1.2em m-6px hover:rotate-10 transition-160"></span>
+    <span
+      class="i-tabler-search text-1.2em m-6px hover:rotate-10 transition-160"
+    ></span>
   </div>
   <div class="slide-enter-content">
     <a
@@ -77,7 +79,7 @@ watchEffect(() => {
   border: 2px solid var(--very-dark-gray);
 }
 .list:hover .i-tabler-ballpen {
-  transform: rotate(-15deg)
+  transform: rotate(-15deg);
 }
 .title-recent {
   width: intrinsic;
@@ -112,7 +114,11 @@ watchEffect(() => {
   transform: translate(6px, 0px);
 }
 .all-articles-link:hover {
-  background-image: linear-gradient(90deg, var(--very-dark-gray), var(--dark-gray));
+  background-image: linear-gradient(
+    90deg,
+    var(--very-dark-gray),
+    var(--dark-gray)
+  );
   background-position: center;
   color: #fff;
   border-width: 0;
