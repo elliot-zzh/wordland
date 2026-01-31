@@ -109,6 +109,9 @@ watchEffect(() => {
   border: 2px solid var(--very-dark-gray);
   text-decoration: none;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 .all-articles-link:hover .i-tabler-chevrons-right {
   transform: translate(6px, 0px);

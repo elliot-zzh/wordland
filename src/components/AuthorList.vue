@@ -8,7 +8,7 @@
       <div class="flex flex-wrap m-10px">
         <span
           v-for="badge in author.badges"
-          class="badge text-white line-height-100% m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
+          class="badge text-white line-height-100% decoration-none m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
         >
           {{ badge }}
         </span>
