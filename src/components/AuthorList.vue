@@ -8,7 +8,7 @@
       <div class="flex flex-wrap m-10px">
         <span
           v-for="badge in author.badges"
-          class="badge text-white line-height-100% hover:decoration-none m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
+          class="badge text-white line-height-100% m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
         >
           {{ badge }}
         </span>
@@ -35,7 +35,7 @@ import { AUTHORS } from '../config'
 .list:hover {
   background-color: var(--very-dark-gray);
 }
-.list:hover * {
+.list:hover *:not(.badge) {
   color: #fff;
   text-decoration: underline var(--very-dark-gray);
 }
