@@ -1,11 +1,11 @@
 <template>
   <div
-    class="pushable max-w-8em m-auto mt-4vh mb-7vh p-2px rounded-10px flex items-center justify-center cursor-pointer throttle transition-220 shadow-md hover:shadow-lg"
+    class="pushable max-w-[8em] m-auto mt-[4vh] mb-[7vh] p-[2px] rounded-[10px] flex items-center justify-center cursor-pointer throttle transition duration-[220ms] shadow-md hover:shadow-lg"
     @click="toggle"
   >
     <span
-      class="m-5px"
-      :class="toLike ? 'i-tabler-thumb-up-filled' : 'i-tabler-thumb-up'"
+      class="m-[5px]"
+      :class="toLike ? 'icon-[tabler--thumb-up-filled]' : 'icon-[tabler--thumb-up]'"
     ></span>
     <span>{{ likesCount }}</span>
   </div>

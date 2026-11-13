@@ -1,41 +1,16 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
-import UnoCSS from 'unocss/astro'
-import { presetUno, presetIcons } from 'unocss'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
+import tailwindcss from '@tailwindcss/vite'
 
 const siteDomain = 'wordland.site'
 
 export default defineConfig({
   site: 'https://' + siteDomain,
-  integrations: [
-    mdx(),
-    sitemap(),
-    UnoCSS({
-      theme: {
-        colors: {
-          // Make color vars from color.css available in UnoCSS
-          basicGray: 'var(--gray)',
-          darkGray: 'var(--dark-gray)',
-          veryDarkGray: 'var(--very-dark-gray)',
-          lightSeaBlue: 'var(--light-sea-blue)',
-          veryLightSeaBlue: 'var(--very-light-sea-blue)',
-          seaBlue: 'var(--sea-blue)',
-          darkSeaBlue: 'var(--dark-sea-blue)',
-          sandYellow: 'var(--sand-yellow)',
-          lightSandYellow: 'var(--light-sand-yellow)'
-        }
-      },
-      presets: [
-        presetUno(),
-        presetIcons({
-          scale: 1.5,
-          cdn: 'https://esm.sh'
-        })
-      ]
-    }),
-    vue()
-  ],
+  integrations: [mdx(), sitemap(), vue()],
+  vite: {
+    plugins: [tailwindcss()]
+  },
   output: 'static'
 })

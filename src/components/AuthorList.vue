@@ -2,20 +2,20 @@
   <div class="slide-enter-content">
     <div
       v-for="author in AUTHORS"
-      class="list p-20px mb-20px rounded-10px hover:shadow-xl transition-240"
+      class="list p-[20px] mb-[20px] rounded-[10px] hover:shadow-xl transition duration-[240ms]"
     >
-      <h2 class="author-name text-1.3em m-0 mb-5px">{{ author.cnName }}</h2>
-      <div class="flex flex-wrap m-10px">
+      <h2 class="author-name text-[1.3em] m-0 mb-[5px]">{{ author.cnName }}</h2>
+      <div class="flex flex-wrap m-[10px]">
         <span
           v-for="badge in author.badges"
-          class="badge text-white line-height-100% m-5px p-7px rounded-5px shadow-sm hover:shadow-md transition-160"
+          class="badge text-white leading-[100%] m-[5px] p-[7px] rounded-[5px] shadow-sm hover:shadow-md transition duration-[160ms]"
         >
           {{ badge }}
         </span>
       </div>
-      <p class="m-0 ml-15px flex items-center email">
-        <span class="i-tabler-mailbox mx-6px transition-160"></span>
-        <i class="text-1.06rem">{{ author.email }}</i>
+      <p class="m-0 ml-[15px] flex items-center email">
+        <span class="icon-[tabler--mailbox] mx-[6px] transition duration-[160ms]"></span>
+        <i class="text-[1.06rem]">{{ author.email }}</i>
       </p>
     </div>
   </div>
@@ -39,7 +39,7 @@ import { AUTHORS } from '../config'
   color: #fff;
   text-decoration: underline var(--very-dark-gray);
 }
-.list:hover .i-tabler-mailbox {
+.list:hover .icon-\[tabler--mailbox\] {
   transform: translateY(-3px);
 }
 .list:hover .author-name {
