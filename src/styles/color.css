@@ -2,10 +2,10 @@
   --gray: #6a6d6e;
   --dark-gray: #444;
   --very-dark-gray: #222;
-  --very-light-sea-blue: #8dbeff;
-  --light-sea-blue: #59a6ff;
-  --sea-blue: #316fd3;
-  --dark-sea-blue: #2655b9;
+  --very-light-sea-blue: #6dacff;
+  --light-sea-blue: #479bfa;
+  --sea-blue: #276ad6;
+  --dark-sea-blue: #2453b9;
   --sand-yellow: #f3ec86;
   --light-sand-yellow: #fff9c5;
 }
@@ -27,16 +27,11 @@ b {
 a {
   color: var(--sea-blue);
 }
-/* Icon masks use currentColor; sea-blue disappears against the nav gradient. */
-nav a {
-  color: var(--very-light-sea-blue);
-}
 input {
   border: 2px solid var(--very-dark-gray);
   transition: all 0.08s ease-in-out;
 }
 input:focus {
-  /*box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);*/
   outline: 0px;
 }
 nav {
@@ -47,8 +42,8 @@ nav {
     var(--sea-blue) 52%,
     var(--light-sea-blue) 52%,
     var(--light-sea-blue) 58%,
-    var(--very-light-sea-blue) 68%,
-    var(--sand-yellow) 68%,
+    var(--very-light-sea-blue) 66%,
+    var(--sand-yellow) 66%,
     var(--sand-yellow) 100%
   );
   background-size: 110% 200%;

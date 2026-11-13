@@ -40,8 +40,6 @@ import { AUTHORS } from '../config'
 .list:hover *:not(.badge) {
   color: #fff;
 }
-/* Decoration propagates from ancestors and cannot be cancelled by the badge
-   itself, so only the text blocks get one -- never the badge wrapper. */
 .list:hover .author-name,
 .list:hover .email {
   text-decoration: underline var(--very-dark-gray);
