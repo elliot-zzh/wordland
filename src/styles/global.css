@@ -1,9 +1,11 @@
 @import 'tailwindcss/theme.css';
+@import 'tailwindcss/preflight.css';
 @import 'tailwindcss/utilities.css';
 @import './utils.css';
 @import './color.css';
 @import './text.css';
 @import './layout.css';
+@import './defaults.css';
 
 @plugin '@iconify/tailwind4' {
   scale: 1.5;
