@@ -1,0 +1,9 @@
+# Static Astro output: no adapter, no functions, `dist/` is the whole deploy.
+# Netlify picks pnpm from pnpm-lock.yaml; the pnpm version can be pinned in the
+# dashboard if the build image ships an older one.
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
