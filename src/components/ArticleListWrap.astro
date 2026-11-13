@@ -8,7 +8,19 @@ export interface Props {
 
 const { mode } = Astro.props
 
-const articles: Array<Article> = (await Astro.glob('../pages/words/*.md'))
+interface PostModule {
+  frontmatter: {
+    title: string
+    pubDate: string
+    author: string
+    description: string
+  }
+  url: string
+}
+
+const articles: Array<Article> = Object.values(
+  import.meta.glob<PostModule>('../pages/words/*.md', { eager: true })
+)
   .sort((a, b) => (a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1))
   .map((post) => {
     return {

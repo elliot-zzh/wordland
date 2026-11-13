@@ -4,7 +4,6 @@ import UnoCSS from 'unocss/astro'
 import { presetUno, presetIcons } from 'unocss'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-import { version } from 'vue'
 
 const siteDomain = 'wordland.site'
 
