@@ -4,10 +4,7 @@ import HeaderLink from './HeaderLink.astro'
 
 <header>
   <nav class="shadow-lg">
-    <div
-      class="flex items-center w-fit p-[3px] pl-[10px] pr-[8px]"
-      id="inner-nav-box"
-    >
+    <div class="flex items-center w-fit p-[3px] pl-[10px] pr-[8px]">
       <HeaderLink href="/" title="主页" class="icon-[tabler--tent]" />
       <HeaderLink
         href="/words"
@@ -34,25 +31,9 @@ import HeaderLink from './HeaderLink.astro'
   header {
     margin: 0em 0 1.6em;
   }
-  .hover-all-children > a {
-    color: var(--very-light-sea-blue);
-  }
 </style>
 
 <script>
-  const div = document.querySelector('#inner-nav-box') as HTMLElement
-
-  div.addEventListener('mouseover', (e) => {
-    if (e.target !== parent) div.classList.add('hover-all-children')
-  })
-
-  div.addEventListener('mouseout', (e) => {
-    let to = e.relatedTarget as Node | null
-    if (to && !div.contains(to)) {
-      div.classList.remove('hover-all-children')
-    }
-  })
-
   // Only enable nav background movement on PC (not mobile)
   function isPC() {
     return window.matchMedia('(pointer:fine)').matches

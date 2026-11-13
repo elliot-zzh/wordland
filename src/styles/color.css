@@ -27,6 +27,10 @@ b {
 a {
   color: var(--sea-blue);
 }
+/* Icon masks use currentColor; sea-blue disappears against the nav gradient. */
+nav a {
+  color: var(--very-light-sea-blue);
+}
 input {
   border: 2px solid var(--very-dark-gray);
   transition: all 0.08s ease-in-out;
