@@ -1,8 +1,10 @@
 run = "pnpm dev"
-modules = ["nodejs-20", "vue-node-20", "web"]
+# Astro 7 needs Node >=22.23.4. The nodejs-24 module supplies Node and pnpm;
+# vue-node-20 would put Node 20 back on PATH.
+modules = ["nodejs-24", "web"]
 
 [nix]
-channel = "stable-23_11"
+channel = "stable-24_11"
 
 [deployment]
 run = ["sh", "-c", "pnpm dev"]

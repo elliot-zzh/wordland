@@ -3,7 +3,9 @@
     v-if="mode === 'Simple'"
     class="title-recent flex items-center mt-[8px] mb-[20px] w-auto cursor-default"
   >
-    <span class="icon-[tabler--chevrons-down] text-[1.1em] transition duration-[150ms]"></span>
+    <span
+      class="icon-[tabler--chevrons-down] text-[1.1em] transition duration-[150ms]"
+    ></span>
     <span class="text-[1.1em]">最近</span>
   </h2>
   <div v-else class="flex items-center flex-nowrap mb-[5px]">
@@ -26,14 +28,18 @@
         class="pushable article-link text-sea-blue text-[1.35em] font-bold m-[5px] ml-[2px] mr-0 flex items-center"
       >
         <span>{{ article.title }}</span>
-        <span class="icon-[tabler--chevrons-right] transition duration-[240ms]"></span>
+        <span
+          class="icon-[tabler--chevrons-right] transition duration-[240ms]"
+        ></span>
       </span>
       <div class="w-full"></div>
       <time class="ml-[20px] m-[5px] not-italic">{{ article.pubDate }}</time>
       <span class="ml-[8px]">
         {{ article.author }}
       </span>
-      <span class="icon-[tabler--ballpen] ml-[3px] transition duration-[160ms]"></span>
+      <span
+        class="icon-[tabler--ballpen] ml-[3px] transition duration-[160ms]"
+      ></span>
       <div class="w-full"></div>
       <div v-if="mode === 'Full'" class="m-[8px] ml-[20px] w-full">
         <p v-for="sentence in article.description" class="m-[6px] ml-0">
@@ -47,7 +53,9 @@
       class="pushable all-articles-link hover:shadow-xl transition duration-[240ms] flex m-auto mt-[33px] mb-[73px] items-center justify-center max-w-[110px] rounded-[10px] p-[5px] hover:p-[7px] text-very-dark-gray"
     >
       <span>全部文章</span>
-      <span class="ml-[1px] icon-[tabler--chevrons-right] transition duration-[480ms]"></span>
+      <span
+        class="ml-[1px] icon-[tabler--chevrons-right] transition duration-[480ms]"
+      ></span>
     </a>
   </div>
 </template>

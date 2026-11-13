@@ -5,7 +5,9 @@
   >
     <span
       class="m-[5px]"
-      :class="toLike ? 'icon-[tabler--thumb-up-filled]' : 'icon-[tabler--thumb-up]'"
+      :class="
+        toLike ? 'icon-[tabler--thumb-up-filled]' : 'icon-[tabler--thumb-up]'
+      "
     ></span>
     <span>{{ likesCount }}</span>
   </div>

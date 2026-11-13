@@ -19,25 +19,20 @@ const {
 
 <BasePage title={title} description={description}>
   <article>
-    {
-      heroImage && (
-        <img
-          width={720}
-          height={360}
-          src={heroImage}
-          alt=""
-          class="mt-[10px] mb-[12px] box-border w-full h-auto rounded-[10px] shadow-lg hover:shadow-xl transition duration-[220ms]"
-        />
-      )
-    }
-    <h1 class="text-[2em] m-[0.25em] ml-0 mr-0">
-      {title}
-    </h1>
+    {heroImage && (
+      <img
+        width={720}
+        height={360}
+        src={heroImage}
+        alt=""
+        class="mt-[10px] mb-[12px] box-border w-full h-auto rounded-[10px] shadow-lg hover:shadow-xl transition duration-[220ms]"
+      />
+    )}
+    <h1 class="text-[2em] m-[0.25em] ml-0 mr-0">{title}</h1>
     <time>{pubDate}</time>
     <p class="flex items-center mt-[8px]">
       <span class="text-[1.1em]">{author}</span>
-      <span class="ml-[3px] icon-[tabler--ballpen] transition duration-[160ms] hover:rotate-[-15deg]"
-      ></span>
+      <span class="ml-[3px] icon-[tabler--ballpen] transition duration-[160ms] hover:rotate-[-15deg]"></span>
     </p>
     <br />
     <slot />

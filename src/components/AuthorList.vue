@@ -14,7 +14,9 @@
         </span>
       </div>
       <p class="m-0 ml-[15px] flex items-center email">
-        <span class="icon-[tabler--mailbox] mx-[6px] transition duration-[160ms]"></span>
+        <span
+          class="icon-[tabler--mailbox] mx-[6px] transition duration-[160ms]"
+        ></span>
         <i class="text-[1.06rem]">{{ author.email }}</i>
       </p>
     </div>

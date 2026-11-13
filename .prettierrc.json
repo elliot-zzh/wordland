@@ -4,20 +4,5 @@
   "useTabs": false,
   "singleQuote": true,
   "trailingComma": "none",
-  "overrides": [
-    {
-      "files": ["*.md"],
-      "options": {
-        "parser": "markdown-nocjsp",
-        "quickFix": true
-      }
-    },
-    {
-      "files": ["*.mdx"],
-      "options": {
-        "parser": "mdx-nocjsp",
-        "quickFix": true
-      }
-    }
-  ]
+  "plugins": ["prettier-plugin-astro"]
 }
