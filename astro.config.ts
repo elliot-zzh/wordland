@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx'
 import UnoCSS from 'unocss/astro'
 import { presetUno, presetIcons } from 'unocss'
 import sitemap from '@astrojs/sitemap'
-import netlify from '@astrojs/netlify/functions'
 import vue from '@astrojs/vue'
 import { version } from 'vue'
 
@@ -39,6 +38,5 @@ export default defineConfig({
     }),
     vue()
   ],
-  output: 'server',
-  adapter: netlify()
+  output: 'static'
 })
