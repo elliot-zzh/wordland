@@ -4,7 +4,7 @@ import HeaderLink from './HeaderLink.astro'
 
 <header>
   <nav class="shadow-lg">
-    <div class="flex items-center w-fit p-[3px] pl-[10px] pr-[8px]">
+    <div class="flex items-center w-fit p-0.75 pl-2.5 pr-2">
       <HeaderLink href="/" title="主页" class="icon-[tabler--tent]" />
       <HeaderLink
         href="/words"
@@ -34,7 +34,6 @@ import HeaderLink from './HeaderLink.astro'
 </style>
 
 <script>
-  // Only enable nav background movement on PC (not mobile)
   function isPC() {
     return window.matchMedia('(pointer:fine)').matches
   }

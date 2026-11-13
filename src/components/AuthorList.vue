@@ -2,20 +2,20 @@
   <div class="slide-enter-content">
     <div
       v-for="author in AUTHORS"
-      class="list p-[20px] mb-[20px] rounded-[10px] hover:shadow-xl transition duration-[240ms]"
+      class="list p-5 mb-5 rounded-card hover:shadow-xl transition duration-240"
     >
-      <h2 class="author-name text-[1.3em] m-0 mb-[5px]">{{ author.cnName }}</h2>
-      <div class="flex flex-wrap m-[10px]">
+      <h2 class="author-name text-[1.3em] m-0 mb-1.25">{{ author.cnName }}</h2>
+      <div class="flex flex-wrap m-2.5">
         <span
           v-for="badge in author.badges"
-          class="badge text-white leading-[100%] m-[5px] p-[7px] rounded-[5px] shadow-sm hover:shadow-md transition duration-[160ms]"
+          class="badge text-white leading-none m-1.25 p-1.75 rounded-badge shadow-sm hover:shadow-md transition duration-160"
         >
           {{ badge }}
         </span>
       </div>
-      <p class="m-0 ml-[15px] flex items-center email">
+      <p class="m-0 ml-3.75 flex items-center email">
         <span
-          class="icon-[tabler--mailbox] mx-[6px] transition duration-[160ms]"
+          class="icon-[tabler--mailbox] mx-1.5 transition duration-160"
         ></span>
         <i class="text-[1.06rem]">{{ author.email }}</i>
       </p>

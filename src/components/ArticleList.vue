@@ -1,48 +1,48 @@
 <template>
   <h2
     v-if="mode === 'Simple'"
-    class="title-recent flex items-center mt-[8px] mb-[20px] w-auto cursor-default"
+    class="title-recent flex items-center mt-2 mb-5 w-auto cursor-default"
   >
     <span
-      class="icon-[tabler--chevrons-down] text-[1.1em] transition duration-[150ms]"
+      class="icon-[tabler--chevrons-down] text-[1.1em] transition duration-150"
     ></span>
     <span class="text-[1.1em]">最近</span>
   </h2>
-  <div v-else class="flex items-center flex-nowrap mb-[5px]">
+  <div v-else class="flex items-center flex-nowrap mb-1.25">
     <input
       v-model="searchWords"
-      class="w-full pushable focus:shadow-xl hover:shadow-xl transition duration-[160ms]"
+      class="w-full pushable focus:shadow-xl hover:shadow-xl transition duration-160"
     />
     <span
-      class="icon-[tabler--search] text-[1.2em] m-[6px] hover:rotate-10 transition duration-[160ms]"
+      class="icon-[tabler--search] text-[1.2em] m-1.5 hover:rotate-10 transition duration-160"
     ></span>
   </div>
   <div class="slide-enter-content">
     <a
-      class="list text-very-dark-gray no-underline p-[10px] pl-[20px] mb-[20px] items-center flex flex-wrap hover:shadow-xl transition duration-[240ms]"
+      class="list text-very-dark-gray no-underline p-2.5 pl-5 mb-5 items-center flex flex-wrap hover:shadow-xl transition duration-240"
       v-for="article in articlesToShow"
-      :class="mode === 'Full' ? 'rounded-[10px]' : 'rounded-[8px]'"
+      :class="mode === 'Full' ? 'rounded-card' : 'rounded-lg'"
       :href="article.url"
     >
       <span
-        class="pushable article-link text-sea-blue text-[1.35em] font-bold m-[5px] ml-[2px] mr-0 flex items-center"
+        class="pushable article-link text-sea-blue text-[1.35em] font-bold m-1.25 ml-0.5 mr-0 flex items-center"
       >
         <span>{{ article.title }}</span>
         <span
-          class="icon-[tabler--chevrons-right] transition duration-[240ms]"
+          class="icon-[tabler--chevrons-right] transition duration-240"
         ></span>
       </span>
       <div class="w-full"></div>
-      <time class="ml-[20px] m-[5px] not-italic">{{ article.pubDate }}</time>
-      <span class="ml-[8px]">
+      <time class="ml-5 m-1.25 not-italic">{{ article.pubDate }}</time>
+      <span class="ml-2">
         {{ article.author }}
       </span>
       <span
-        class="icon-[tabler--ballpen] ml-[3px] transition duration-[160ms]"
+        class="icon-[tabler--ballpen] ml-0.75 transition duration-160"
       ></span>
       <div class="w-full"></div>
-      <div v-if="mode === 'Full'" class="m-[8px] ml-[20px] w-full">
-        <p v-for="sentence in article.description" class="m-[6px] ml-0">
+      <div v-if="mode === 'Full'" class="m-2 ml-5 w-full">
+        <p v-for="sentence in article.description" class="m-1.5 ml-0">
           <i>{{ sentence }}</i>
         </p>
       </div>
@@ -50,11 +50,11 @@
     <a
       v-if="mode === 'Simple'"
       href="/words"
-      class="pushable all-articles-link hover:shadow-xl transition duration-[240ms] flex m-auto mt-[33px] mb-[73px] items-center justify-center max-w-[110px] rounded-[10px] p-[5px] hover:p-[7px] text-very-dark-gray"
+      class="pushable all-articles-link hover:shadow-xl transition duration-240 flex m-auto mt-8.25 mb-18.25 items-center justify-center max-w-27.5 rounded-card p-1.25 hover:p-1.75 text-very-dark-gray"
     >
       <span>全部文章</span>
       <span
-        class="ml-[1px] icon-[tabler--chevrons-right] transition duration-[480ms]"
+        class="ml-0.25 icon-[tabler--chevrons-right] transition duration-480"
       ></span>
     </a>
   </div>
@@ -74,7 +74,6 @@ const articlesToShow = ref(
   props.mode === 'Full' ? props.articles : props.articles.slice(0, 5)
 )
 
-// Search article
 const searchWords = ref('')
 watchEffect(() => {
   if (props.mode === 'Full')

@@ -25,14 +25,14 @@ const {
         height={360}
         src={heroImage}
         alt=""
-        class="mt-[10px] mb-[12px] box-border w-full h-auto rounded-[10px] shadow-lg hover:shadow-xl transition duration-[220ms]"
+        class="mt-2.5 mb-3 box-border w-full h-auto rounded-card shadow-lg hover:shadow-xl transition duration-220"
       />
     )}
-    <h1 class="text-[2em] m-[0.25em] ml-0 mr-0">{title}</h1>
+    <h1 class="text-[2em] m-2 ml-0 mr-0">{title}</h1>
     <time>{pubDate}</time>
-    <p class="flex items-center mt-[8px]">
+    <p class="flex items-center mt-2">
       <span class="text-[1.1em]">{author}</span>
-      <span class="ml-[3px] icon-[tabler--ballpen] transition duration-[160ms] hover:rotate-[-15deg]"></span>
+      <span class="ml-0.75 icon-[tabler--ballpen] transition duration-160 hover:-rotate-15"></span>
     </p>
     <br />
     <slot />
