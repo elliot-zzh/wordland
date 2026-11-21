@@ -3,9 +3,9 @@ export const SITE_DESCRIPTION = '在繁华的世界里 找寻文字的痕迹'
 
 export const AUTHORS = [
   {
-    cnName: '张又左',
-    badges: ['编辑', '撰写人'],
-    email: 'elliot_zh@proton.me'
+    cnName: '常安',
+    badges: ['撰写人'],
+    email: '2983909004@qq.com'
   },
   {
     cnName: '陈晏如',
@@ -13,24 +13,24 @@ export const AUTHORS = [
     email: '2512006026@qq.com'
   },
   {
+    cnName: '孑川',
+    badges: ['撰写人'],
+    email: 'je_llivv@icloud.com'
+  },
+  {
     cnName: '蓝绿球',
     badges: ['撰写人'],
     email: 'hzy_200711@163.com'
   },
   {
-    cnName: '常安',
-    badges: ['撰写人'],
-    email: '2983909004@qq.com'
+    cnName: '张又左',
+    badges: ['编辑', '撰写人'],
+    email: 'elliot_zh@proton.me'
   },
   {
     cnName: '左蓝',
     badges: ['撰写人'],
     email: 'quensonanna.su@icloud.com'
-  },
-  {
-    cnName: '孑川',
-    badges: ['撰写人'],
-    email: 'je_llivv@icloud.com'
   }
 ]
 
