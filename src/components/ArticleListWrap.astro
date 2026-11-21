@@ -14,14 +14,31 @@ interface PostModule {
     pubDate: string
     author: string
     description: string
+    /** Optional second-level order for posts sharing a pubDate; smaller comes first */
+    order?: number
   }
   url: string
+}
+
+// A missing / non-numeric `order` sorts after every explicit one.
+const toOrder = (value: unknown): number => {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY
 }
 
 const articles: Array<Article> = Object.values(
   import.meta.glob<PostModule>('../pages/words/*.md', { eager: true })
 )
-  .sort((a, b) => (a.frontmatter.pubDate <= b.frontmatter.pubDate ? 1 : -1))
+  // pubs newest first; same-day posts follow their optional `order` (missing => last)
+  .sort((a, b) => {
+    const byDate = (b.frontmatter.pubDate ?? '').localeCompare(a.frontmatter.pubDate ?? '')
+    if (byDate) return byDate
+
+    const orderA = toOrder(a.frontmatter.order)
+    const orderB = toOrder(b.frontmatter.order)
+    if (orderA === orderB) return 0
+    return orderA < orderB ? -1 : 1
+  })
   .map((post) => {
     return {
       title: post.frontmatter.title,
